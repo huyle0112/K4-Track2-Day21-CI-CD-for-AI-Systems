@@ -42,6 +42,12 @@ def train(
     X_eval = df_eval.drop(columns=["target"])
     y_eval = df_eval["target"]
 
+    # MLflow local tracking store
+    mlflow.set_tracking_uri("file:./mlruns")
+
+    # Dam bao experiment ton tai
+    mlflow.set_experiment("income-model")
+
     with mlflow.start_run():
 
         # TODO 3: Ghi nhan cac sieu tham so
