@@ -1,0 +1,47 @@
+{
+
+  "Version": "2012-10-17",
+
+  "Statement": [
+
+    {
+
+      "Sid": "BucketAccess",
+
+      "Effect": "Allow",
+
+      "Action": [
+
+        "s3:ListBucket",
+
+        "s3:GetBucketLocation"
+
+      ],
+
+      "Resource": "arn:aws:s3:::income-lab-huy-dvc"
+
+    },
+
+    {
+
+      "Sid": "ObjectAccess",
+
+      "Effect": "Allow",
+
+      "Action": [
+
+        "s3:GetObject",
+
+        "s3:PutObject",
+
+        "s3:DeleteObject"
+
+      ],
+
+      "Resource": "arn:aws:s3:::income-lab-huy-dvc/*"
+
+    }
+
+  ]
+
+}
